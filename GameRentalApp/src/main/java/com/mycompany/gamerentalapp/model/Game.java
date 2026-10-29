@@ -5,8 +5,10 @@
 package com.mycompany.gamerentalapp.model;
 
 /**
- *
- * @author ekmor
+ * Clase que representa un videojuego disponible en el catálogo del sistema
+ * Contiene los datos principales del juego y el stock de copias disponibles
+ * 
+ * @author Ekaterina Morozova
  */
 public class Game {
     

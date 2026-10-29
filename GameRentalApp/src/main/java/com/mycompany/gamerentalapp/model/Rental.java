@@ -5,8 +5,10 @@
 package com.mycompany.gamerentalapp.model;
 
 /**
- *
- * @author ekmor
+ * Clase que representa la transacción de alquiler de un videojuego por parte de un usuario
+ * Vincula al cliente con el juego alquilado y gestiona las fechas de préstamo y devolución
+ * 
+ * @author Ekaterina Morozova
  */
 public class Rental {
     
