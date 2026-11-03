@@ -4,7 +4,7 @@
  */
 package com.mycompany.gamerentalapp.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Clase que representa un usuario o cliente del sistema de alquiler de videojuegos
@@ -15,7 +15,7 @@ import java.util.Date;
 public class User {
     
     private String userId, name, firstName, lastName, dni, phoneNumber;
-    private Date dateOfRegister;
+    private LocalDate dateOfRegister;
     
     public User() {}
     
@@ -26,7 +26,7 @@ public class User {
             String lastName,
             String dni,
             String phoneNumber,
-            Date dateOfRegister
+            LocalDate dateOfRegister
     ){
         setUserId(userId);
         setName(name);
@@ -123,11 +123,11 @@ public class User {
         this.phoneNumber = phoneNumber.trim();
     }
 
-    public Date getDateOfRegister() {
+    public LocalDate getDateOfRegister() {
         return dateOfRegister;
     }
 
-    public void setDateOfRegister(Date dateOfRegister) {
+    public void setDateOfRegister(LocalDate dateOfRegister) {
         if (dateOfRegister == null) {
             throw new IllegalArgumentException(
                     "La fecha de registro no puede ser nula"
