@@ -4,6 +4,9 @@
 
 package com.mycompany.gamerentalapp;
 
+import com.mycompany.gamerentalapp.data.DataRepository;
+import com.mycompany.gamerentalapp.data.SampleData;
+
 /**
  * Clase principalde la aplicación de gestión de alquiler de videojuegos
  * 
