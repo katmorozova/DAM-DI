@@ -8,14 +8,15 @@ package com.mycompany.gamerentalapp.gui;
  *
  * @author Ekaterina Morozova
  */
-public class RegisterRentalScreen extends javax.swing.JFrame {
+public class RegisterRentalScreen extends javax.swing.JDialog {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RegisterRentalScreen.class.getName());
 
     /**
      * Creates new form RegisterRentalScreen
      */
-    public RegisterRentalScreen() {
+    public RegisterRentalScreen(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
