@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package com.mycompany.gamerentalapp.gui;
 
@@ -29,258 +29,141 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jRadioButtonPc = new javax.swing.JRadioButton();
+        jRadioButtonPss = new javax.swing.JRadioButton();
+        jRadioButtonXbox = new javax.swing.JRadioButton();
+        jRadioButtonSwitch = new javax.swing.JRadioButton();
+        jLabelPcCount = new javax.swing.JLabel();
+        jLabelPssCount = new javax.swing.JLabel();
+        jLabelXboxCount = new javax.swing.JLabel();
+        jLabelSwitchCount = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabelGender = new javax.swing.JLabel();
+        jLabelGenderType = new javax.swing.JLabel();
+        jLabelGender1 = new javax.swing.JLabel();
+        jLabelPss = new javax.swing.JLabel();
+        jLabelXbox = new javax.swing.JLabel();
+        jLabelPc = new javax.swing.JLabel();
+        jLabelSwitch = new javax.swing.JLabel();
         jPanelRentalData = new javax.swing.JPanel();
         jLabelNumRegister = new javax.swing.JLabel();
         jTextFieldNumRegister = new javax.swing.JTextField();
         jLabelUser = new javax.swing.JLabel();
         jComboBoxUser = new javax.swing.JComboBox<>();
         jButtonSelectUser = new javax.swing.JButton();
-        jLabelJoc = new javax.swing.JLabel();
+        jLabelGame = new javax.swing.JLabel();
         jComboBoxGame = new javax.swing.JComboBox<>();
         jButtonSelectGame = new javax.swing.JButton();
         jLabelBeginDate = new javax.swing.JLabel();
-        jLabelReturnDate = new javax.swing.JLabel();
         jFormattedTextFieldBeginDate = new javax.swing.JFormattedTextField();
+        jLabelBeginDate1 = new javax.swing.JLabel();
         jFormattedTextFieldReturnDate = new javax.swing.JFormattedTextField();
-        jPanelPlatform = new javax.swing.JPanel();
-        jLabelPcUnits = new javax.swing.JLabel();
-        jRadioButtonPc = new javax.swing.JRadioButton();
-        jRadioButtonPss = new javax.swing.JRadioButton();
-        jRadioButtonXbox = new javax.swing.JRadioButton();
-        jRadioButtonSwitch = new javax.swing.JRadioButton();
-        jLabelPssUnits = new javax.swing.JLabel();
-        jLabelXboxUnits = new javax.swing.JLabel();
-        jLabelSwitchUnits = new javax.swing.JLabel();
-        jPanelGame = new javax.swing.JPanel();
-        jLabelGenere = new javax.swing.JLabel();
-        jLabelGenereType = new javax.swing.JLabel();
-        jLabelUnitsInStock = new javax.swing.JLabel();
-        jLabelPss = new javax.swing.JLabel();
-        jLabelXbox = new javax.swing.JLabel();
-        jLabelPc = new javax.swing.JLabel();
-        jLabelSwitch = new javax.swing.JLabel();
-        jLabelPssUnitsGame = new javax.swing.JLabel();
-        jLabelXboxUnitsGame = new javax.swing.JLabel();
-        jLabelPcUnitsGame = new javax.swing.JLabel();
-        jLabelSwitchUnitsGame = new javax.swing.JLabel();
-        jButtonSave = new javax.swing.JButton();
-        jButtonDelete = new javax.swing.JButton();
+        jButtonConfirm = new javax.swing.JButton();
+        jButtonCancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jRadioButton1.setText("jRadioButton1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registrar lloguer");
-        setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
+        setForeground(new java.awt.Color(0, 51, 102));
 
-        jPanelRentalData.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dades del lloguer", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Plataforma", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Semibold", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
 
-        jLabelNumRegister.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabelNumRegister.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelNumRegister.setText("Núm. de registre:");
-
-        jTextFieldNumRegister.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"));
-        jTextFieldNumRegister.setForeground(new java.awt.Color(0, 102, 153));
-        jTextFieldNumRegister.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jTextFieldNumRegister.addActionListener(this::jTextFieldNumRegisterActionPerformed);
-
-        jLabelUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabelUser.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelUser.setText("Usuari:");
-
-        jComboBoxUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jComboBoxUser.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jButtonSelectUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jButtonSelectUser.setForeground(new java.awt.Color(0, 51, 102));
-        jButtonSelectUser.setText("Seleccionar...");
-
-        jLabelJoc.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabelJoc.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelJoc.setText("Joc elegit:");
-
-        jComboBoxGame.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jComboBoxGame.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jButtonSelectGame.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jButtonSelectGame.setForeground(new java.awt.Color(0, 51, 102));
-        jButtonSelectGame.setText("Seleccionar...");
-
-        jLabelBeginDate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabelBeginDate.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelBeginDate.setText("Data d'inici:");
-
-        jLabelReturnDate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        jLabelReturnDate.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelReturnDate.setText("Data de tornada:");
-
-        jFormattedTextFieldBeginDate.setForeground(new java.awt.Color(153, 153, 153));
-        jFormattedTextFieldBeginDate.setText("15/04/2025");
-        jFormattedTextFieldBeginDate.setCaretColor(new java.awt.Color(204, 204, 204));
-        jFormattedTextFieldBeginDate.addActionListener(this::jFormattedTextFieldBeginDateActionPerformed);
-
-        jFormattedTextFieldReturnDate.setForeground(new java.awt.Color(153, 153, 153));
-        jFormattedTextFieldReturnDate.setText("25/04/2025");
-
-        javax.swing.GroupLayout jPanelRentalDataLayout = new javax.swing.GroupLayout(jPanelRentalData);
-        jPanelRentalData.setLayout(jPanelRentalDataLayout);
-        jPanelRentalDataLayout.setHorizontalGroup(
-            jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                        .addComponent(jLabelReturnDate, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(279, 279, 279))
-                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                        .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelBeginDate, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                                .addComponent(jLabelNumRegister)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldNumRegister))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRentalDataLayout.createSequentialGroup()
-                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jFormattedTextFieldReturnDate, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jFormattedTextFieldBeginDate, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelRentalDataLayout.createSequentialGroup()
-                                        .addComponent(jLabelJoc, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jComboBoxUser, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxGame, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButtonSelectUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonSelectGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())))
-        );
-        jPanelRentalDataLayout.setVerticalGroup(
-            jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabelNumRegister))
-                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextFieldNumRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSelectUser, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabelJoc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonSelectGame, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxGame, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabelBeginDate)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextFieldBeginDate, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelReturnDate)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFormattedTextFieldReturnDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-        );
-
-        jPanelPlatform.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Plataforma", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
-
-        jLabelPcUnits.setText("( X unitat disponible)");
-
-        jRadioButtonPc.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jRadioButtonPc.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jRadioButtonPc.setForeground(new java.awt.Color(0, 51, 102));
         jRadioButtonPc.setText("PC");
         jRadioButtonPc.addActionListener(this::jRadioButtonPcActionPerformed);
 
-        jRadioButtonPss.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jRadioButtonPss.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jRadioButtonPss.setForeground(new java.awt.Color(0, 51, 102));
         jRadioButtonPss.setText("PSS");
-        jRadioButtonPss.addActionListener(this::jRadioButtonPssActionPerformed);
 
-        jRadioButtonXbox.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jRadioButtonXbox.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jRadioButtonXbox.setForeground(new java.awt.Color(0, 51, 102));
         jRadioButtonXbox.setText("Xbox");
-        jRadioButtonXbox.addActionListener(this::jRadioButtonXboxActionPerformed);
 
-        jRadioButtonSwitch.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jRadioButtonSwitch.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jRadioButtonSwitch.setForeground(new java.awt.Color(0, 51, 102));
         jRadioButtonSwitch.setText("Switch 2");
-        jRadioButtonSwitch.addActionListener(this::jRadioButtonSwitchActionPerformed);
 
-        jLabelPssUnits.setText("( X unitat disponible)");
+        jLabelPcCount.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelPcCount.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelPcCount.setText("( 1 unitat disponible )");
 
-        jLabelXboxUnits.setText("( X unitat disponible)");
+        jLabelPssCount.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelPssCount.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelPssCount.setText("( 1 unitat disponible )");
 
-        jLabelSwitchUnits.setText("( X unitat disponible)");
+        jLabelXboxCount.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelXboxCount.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelXboxCount.setText("( 1 unitat disponible )");
 
-        javax.swing.GroupLayout jPanelPlatformLayout = new javax.swing.GroupLayout(jPanelPlatform);
-        jPanelPlatform.setLayout(jPanelPlatformLayout);
-        jPanelPlatformLayout.setHorizontalGroup(
-            jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPlatformLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPlatformLayout.createSequentialGroup()
-                            .addComponent(jRadioButtonXbox, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelXboxUnits, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPlatformLayout.createSequentialGroup()
-                            .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jRadioButtonPss, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButtonPc, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelPcUnits, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabelPssUnits, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelPlatformLayout.createSequentialGroup()
-                        .addComponent(jRadioButtonSwitch)
+        jLabelSwitchCount.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelSwitchCount.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelSwitchCount.setText("( 1 unitat disponible )");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonPc, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelSwitchUnits, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(77, 77, 77))
+                        .addComponent(jLabelPcCount, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonPss, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelPssCount, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonXbox, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelXboxCount, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelSwitchCount, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
-        jPanelPlatformLayout.setVerticalGroup(
-            jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPlatformLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPcUnits)
-                    .addComponent(jRadioButtonPc))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonPc)
+                    .addComponent(jLabelPcCount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonPss)
-                    .addComponent(jLabelPssUnits))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPssCount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonXbox)
-                    .addComponent(jLabelXboxUnits))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelPlatformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelXboxCount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonSwitch)
-                    .addComponent(jLabelSwitchUnits))
-                .addContainerGap())
+                    .addComponent(jLabelSwitchCount))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelGame.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informació del joc", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informació del joc", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Semibold", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
 
-        jLabelGenere.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jLabelGenere.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelGenere.setText("Gènere:");
+        jLabelGender.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jLabelGender.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelGender.setText("Generè:");
 
-        jLabelGenereType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jLabelGenereType.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelGenereType.setText("Acció");
+        jLabelGenderType.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jLabelGenderType.setForeground(new java.awt.Color(0, 51, 102));
 
-        jLabelUnitsInStock.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
-        jLabelUnitsInStock.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelUnitsInStock.setText("Unitats disponibles:");
+        jLabelGender1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jLabelGender1.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelGender1.setText("Unitats disponibles:");
 
         jLabelPss.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         jLabelPss.setForeground(new java.awt.Color(0, 51, 102));
@@ -298,87 +181,183 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
         jLabelSwitch.setForeground(new java.awt.Color(0, 51, 102));
         jLabelSwitch.setText("Switch 2:");
 
-        jLabelPssUnitsGame.setText("0");
-
-        jLabelXboxUnitsGame.setText("0");
-
-        jLabelPcUnitsGame.setText("0");
-
-        jLabelSwitchUnitsGame.setText("0");
-
-        javax.swing.GroupLayout jPanelGameLayout = new javax.swing.GroupLayout(jPanelGame);
-        jPanelGame.setLayout(jPanelGameLayout);
-        jPanelGameLayout.setHorizontalGroup(
-            jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGameLayout.createSequentialGroup()
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelGameLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelUnitsInStock, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelGameLayout.createSequentialGroup()
-                                .addComponent(jLabelGenere, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelGender1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabelGender, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelGenereType, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelGameLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanelGameLayout.createSequentialGroup()
-                                .addComponent(jLabelSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelSwitchUnitsGame, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelGameLayout.createSequentialGroup()
-                                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabelXbox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelPss, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelPc, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, Short.MAX_VALUE)
-                                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelPcUnitsGame, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelPssUnitsGame, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelXboxUnitsGame, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(jLabelGenderType, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelXbox, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPss, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPc, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelSwitch))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanelGameLayout.setVerticalGroup(
-            jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGameLayout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelGenere)
-                    .addComponent(jLabelGenereType))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelGender)
+                    .addComponent(jLabelGenderType))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelUnitsInStock)
+                .addComponent(jLabelGender1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPss, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelPssUnitsGame))
+                .addComponent(jLabelPss)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelXbox, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelXboxUnitsGame))
+                .addComponent(jLabelXbox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPc, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelPcUnitsGame))
+                .addComponent(jLabelPc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelSwitch)
-                    .addComponent(jLabelSwitchUnitsGame))
+                .addComponent(jLabelSwitch)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButtonSave.setBackground(new java.awt.Color(51, 153, 0));
-        jButtonSave.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setText(" Confirmar");
-        jButtonSave.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jButtonSave.addActionListener(this::jButtonSaveActionPerformed);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jButtonDelete.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(0, 102, 153));
-        jButtonDelete.setText("Cancel·lar");
-        jButtonDelete.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jPanelRentalData.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dades del lloguer", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Semibold", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
+
+        jLabelNumRegister.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelNumRegister.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelNumRegister.setText("Núm. de registre: ");
+
+        jLabelUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelUser.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelUser.setText("Usuari:");
+
+        jComboBoxUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButtonSelectUser.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jButtonSelectUser.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonSelectUser.setText("Seleccionar...");
+
+        jLabelGame.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelGame.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelGame.setText("Joc elegit:");
+
+        jComboBoxGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButtonSelectGame.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jButtonSelectGame.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonSelectGame.setText("Seleccionar...");
+
+        jLabelBeginDate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelBeginDate.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelBeginDate.setText("Data d'inici:");
+
+        jFormattedTextFieldBeginDate.setText("12/12/2025");
+
+        jLabelBeginDate1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
+        jLabelBeginDate1.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelBeginDate1.setText("Data de tornada:");
+
+        jFormattedTextFieldReturnDate.setText("23/03/2025");
+
+        javax.swing.GroupLayout jPanelRentalDataLayout = new javax.swing.GroupLayout(jPanelRentalData);
+        jPanelRentalData.setLayout(jPanelRentalDataLayout);
+        jPanelRentalDataLayout.setHorizontalGroup(
+            jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                        .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelUser)
+                                    .addComponent(jLabelGame, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                                .addComponent(jLabelNumRegister)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldNumRegister))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRentalDataLayout.createSequentialGroup()
+                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jComboBoxGame, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxUser, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jFormattedTextFieldBeginDate, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jFormattedTextFieldReturnDate, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonSelectUser, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButtonSelectGame, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                        .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelBeginDate, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelBeginDate1))
+                        .addGap(274, 274, 274))))
+        );
+        jPanelRentalDataLayout.setVerticalGroup(
+            jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRentalDataLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNumRegister)
+                    .addComponent(jTextFieldNumRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addComponent(jLabelUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxUser, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSelectUser, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelGame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelRentalDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonSelectGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBoxGame, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabelBeginDate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextFieldBeginDate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelBeginDate1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextFieldReturnDate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        jButtonConfirm.setBackground(new java.awt.Color(0, 153, 51));
+        jButtonConfirm.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jButtonConfirm.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonConfirm.setText("Confirmar");
+
+        jButtonCancel.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonCancel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jButtonCancel.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonCancel.setText("Cancel·lar");
+        jButtonCancel.addActionListener(this::jButtonCancelActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -387,66 +366,44 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelRentalData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanelGame, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanelPlatform, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelPlatform, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanelGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addComponent(jPanelRentalData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelRentalData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(51, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSaveActionPerformed
-
-    private void jTextFieldNumRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNumRegisterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNumRegisterActionPerformed
-
     private void jRadioButtonPcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPcActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonPcActionPerformed
 
-    private void jRadioButtonSwitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSwitchActionPerformed
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonSwitchActionPerformed
-
-    private void jRadioButtonXboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonXboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonXboxActionPerformed
-
-    private void jRadioButtonPssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPssActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonPssActionPerformed
-
-    private void jFormattedTextFieldBeginDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextFieldBeginDateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextFieldBeginDateActionPerformed
+    }//GEN-LAST:event_jButtonCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -486,8 +443,8 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonDelete;
-    private javax.swing.JButton jButtonSave;
+    private javax.swing.JButton jButtonCancel;
+    private javax.swing.JButton jButtonConfirm;
     private javax.swing.JButton jButtonSelectGame;
     private javax.swing.JButton jButtonSelectUser;
     private javax.swing.JComboBox<String> jComboBoxGame;
@@ -495,28 +452,26 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
     private javax.swing.JFormattedTextField jFormattedTextFieldBeginDate;
     private javax.swing.JFormattedTextField jFormattedTextFieldReturnDate;
     private javax.swing.JLabel jLabelBeginDate;
-    private javax.swing.JLabel jLabelGenere;
-    private javax.swing.JLabel jLabelGenereType;
-    private javax.swing.JLabel jLabelJoc;
+    private javax.swing.JLabel jLabelBeginDate1;
+    private javax.swing.JLabel jLabelGame;
+    private javax.swing.JLabel jLabelGender;
+    private javax.swing.JLabel jLabelGender1;
+    private javax.swing.JLabel jLabelGenderType;
     private javax.swing.JLabel jLabelNumRegister;
     private javax.swing.JLabel jLabelPc;
-    private javax.swing.JLabel jLabelPcUnits;
-    private javax.swing.JLabel jLabelPcUnitsGame;
+    private javax.swing.JLabel jLabelPcCount;
     private javax.swing.JLabel jLabelPss;
-    private javax.swing.JLabel jLabelPssUnits;
-    private javax.swing.JLabel jLabelPssUnitsGame;
-    private javax.swing.JLabel jLabelReturnDate;
+    private javax.swing.JLabel jLabelPssCount;
     private javax.swing.JLabel jLabelSwitch;
-    private javax.swing.JLabel jLabelSwitchUnits;
-    private javax.swing.JLabel jLabelSwitchUnitsGame;
-    private javax.swing.JLabel jLabelUnitsInStock;
+    private javax.swing.JLabel jLabelSwitchCount;
     private javax.swing.JLabel jLabelUser;
     private javax.swing.JLabel jLabelXbox;
-    private javax.swing.JLabel jLabelXboxUnits;
-    private javax.swing.JLabel jLabelXboxUnitsGame;
-    private javax.swing.JPanel jPanelGame;
-    private javax.swing.JPanel jPanelPlatform;
+    private javax.swing.JLabel jLabelXboxCount;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelRentalData;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButtonPc;
     private javax.swing.JRadioButton jRadioButtonPss;
     private javax.swing.JRadioButton jRadioButtonSwitch;

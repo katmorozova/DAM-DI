@@ -6,7 +6,7 @@ package com.mycompany.gamerentalapp.gui;
 
 /**
  *
- * @author ekmor
+ * @author Ekaterina Morozova
  */
 public class PrincipalScreen extends javax.swing.JFrame {
     
@@ -17,6 +17,31 @@ public class PrincipalScreen extends javax.swing.JFrame {
      */
     public PrincipalScreen() {
         initComponents();
+        
+        // Register rental screen
+        jMenuRegisterRent.addActionListener(e -> {
+            RegisterRentalScreen dialog = new RegisterRentalScreen(this, true);
+            dialog.setVisible(true);
+        });
+
+        // Return rental screen
+        jMenuReturnRent.addActionListener(e -> {
+            ReturnRentalScreen dialog = new ReturnRentalScreen(this, true);
+            dialog.setVisible(true);
+        });
+
+        // Create user screen
+        jMenuCrearUser.addActionListener(e -> {
+            CreateUserScreen dialog = new CreateUserScreen(this, true);
+            dialog.setVisible(true);
+        });
+        
+        // Create game screen
+        jMenuCreateGame.addActionListener(e -> {
+            CreateGameScreen dialog = new CreateGameScreen(this, true);
+            dialog.setVisible(true);
+        });
+        
     }
 
     /**
