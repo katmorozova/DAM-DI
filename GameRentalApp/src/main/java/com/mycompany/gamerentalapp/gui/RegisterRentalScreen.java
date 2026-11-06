@@ -4,14 +4,28 @@
  */
 package com.mycompany.gamerentalapp.gui;
 
+import com.mycompany.gamerentalapp.data.DataRepository;
+import com.mycompany.gamerentalapp.model.Game;
+import com.mycompany.gamerentalapp.model.User;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+
 /**
- *
+ * Dialog window for registering a new video game rental transaction
+ * 
+ * Manages user and game selection, automatic start and return dates,
+ * dynamic platform stock availability validation, and inventory deduction
+ * 
  * @author Ekaterina Morozova
  */
 public class RegisterRentalScreen extends javax.swing.JDialog {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RegisterRentalScreen.class.getName());
-
+    private DataRepository repository;
+    private ButtonGroup platformButtonGroup;
+    
     /**
      * Creates new form RegisterRentalScreen
      */
@@ -20,6 +34,58 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
         initComponents();
     }
 
+    private void initCustomizations() {
+        // Center the dialog relative to the parent window
+        setLocationRelativeTo(getOwner());
+        
+        // Group platform radio buttons to ensure mutually exclusive selection
+        platformButtonGroup = new ButtonGroup();
+        platformButtonGroup.add(jRadioButtonPss);
+        platformButtonGroup.add(jRadioButtonXbox);
+        platformButtonGroup.add(jRadioButtonPc);
+        platformButtonGroup.add(jRadioButtonSwitch);
+        
+        // Generate automatic registration number ID
+        String nextId = String.format("%02d", repository.getRentals().size() + 1);
+        jTextFieldNumRegister.setText(nextId);
+        jTextFieldNumRegister.setEditable(false);
+        
+        // Automatic date handling: start date is today, expected return in 7 days 
+        LocalDate startDate = LocalDate.now();
+        LocalDate returnDate = startDate.plusDays(7);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
+        jFormattedTextFieldBeginDate.setText(startDate.format(formatter));
+        jFormattedTextFieldBeginDate.setEditable(false);
+        
+        jFormattedTextFieldReturnDate.setText(returnDate.format(formatter));
+        jFormattedTextFieldReturnDate.setEditable(false);
+        
+        // Load users and games into ComboBoxes
+        loadUsersAndGames();
+        
+        // Button actions for cancellation
+        jButtonCancel.addActionListener(e -> dispose());
+    }
+    
+    /**
+     * Loads and populates the user and game ComboBox models using data 
+     * retrieved from the global repository
+     */
+    private void loadUsersAndGames() {
+        // Create and populate the user combo box model
+        DefaultComboBoxModel<User> userModel = new DefaultComboBoxModel<>();
+            for (User user : repository.getUsers()) {
+                userModel.addElement(user);
+            }
+        jComboBoxUser.setModel((DefaultComboBoxModel) userModel);
+        // Create and populate the game combo box model
+        DefaultComboBoxModel<Game> gameModel = new DefaultComboBoxModel<>();
+            for (Game game : repository.getGames()) {
+                gameModel.addElement(game);
+            }
+        jComboBoxGame.setModel((DefaultComboBoxModel) gameModel);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
