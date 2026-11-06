@@ -6,7 +6,7 @@ package com.mycompany.gamerentalapp.gui;
 
 /**
  *
- * @author Ekat
+ * @author Ekaterina Morozova
  */
 public class CreateUserScreen extends javax.swing.JDialog {
     

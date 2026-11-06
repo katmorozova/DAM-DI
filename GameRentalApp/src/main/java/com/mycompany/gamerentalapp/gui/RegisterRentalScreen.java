@@ -6,9 +6,11 @@ package com.mycompany.gamerentalapp.gui;
 
 import com.mycompany.gamerentalapp.data.DataRepository;
 import com.mycompany.gamerentalapp.model.Game;
+import com.mycompany.gamerentalapp.model.Platform;
 import com.mycompany.gamerentalapp.model.User;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 
@@ -37,6 +39,8 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
     private void initCustomizations() {
         // Center the dialog relative to the parent window
         setLocationRelativeTo(getOwner());
+        
+        jComboBoxGame.addActionListener(e -> updateGameInformation());
         
         // Group platform radio buttons to ensure mutually exclusive selection
         platformButtonGroup = new ButtonGroup();
@@ -86,6 +90,84 @@ public class RegisterRentalScreen extends javax.swing.JDialog {
             }
         jComboBoxGame.setModel((DefaultComboBoxModel) gameModel);
     }
+    
+    /**
+     * Updates the game genre display and refreshes the platform stock 
+     * availability state whenever a different game is selected
+     */
+    private void updateGameInformation() {
+        Game selectedGame = (Game) jComboBoxGame.getSelectedItem();
+        if (selectedGame == null) return;
+
+        // Display the genre of the selected game
+        if (selectedGame.getGenre() != null) {
+            jLabelGenderType.setText(selectedGame.getGenre().getDisplayName());
+        }
+
+        Map<Platform, Integer> stockMap = selectedGame.getPlatformsStock();
+
+        //Update stock labels and enable/disable radio buttons dynamically per platform
+        updatePlatformState(
+                Platform.PS5, 
+                stockMap, 
+                jRadioButtonPss, 
+                jLabelPssCount, 
+                jLabelPss
+        );
+        updatePlatformState(
+                Platform.XBOX, 
+                stockMap, 
+                jRadioButtonXbox, 
+                jLabelXboxCount, 
+                jLabelXbox
+        );
+        updatePlatformState(
+                Platform.PC, 
+                stockMap, 
+                jRadioButtonPc, 
+                jLabelPcCount, 
+                jLabelPc
+        );
+        updatePlatformState(
+                Platform.SWITCH_2, 
+                stockMap, 
+                jRadioButtonSwitch, 
+                jLabelSwitchCount, 
+                jLabelSwitch
+        );
+    }
+
+    /**
+     * Updates the availability label and interactive state for a specific 
+     * platform radio button
+     * 
+     * Disables the radio button if zero units are available
+     */
+    private void updatePlatformState(
+            Platform platform, 
+            Map<Platform, Integer> stockMap, 
+            javax.swing.JRadioButton radioBtn,
+            javax.swing.JLabel countLabel,
+            javax.swing.JLabel infoLabel
+    ) {
+        int stock = stockMap.getOrDefault(platform, 0);
+        countLabel.setText(
+                "( " + stock + " unitat" + (stock == 1 ? "" : "s") + 
+                        " disponible" + (stock == 1 ? "" : "s") + " )"
+        );
+        infoLabel.setText(platform.getDisplayName() + ": " + stock);
+
+        // Disable radio button and clear selection if out of stock
+        if (stock > 0) {
+            radioBtn.setEnabled(true);
+        } else {
+            radioBtn.setEnabled(false);
+            if (radioBtn.isSelected()) {
+                radioBtn.setSelected(false);
+            }
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
