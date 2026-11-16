@@ -7,7 +7,7 @@ package com.mycompany.digitalclockwidget.component;
 import java.util.EventListener;
 
 /**
- *
+ * 
  * @author Ekaterina Morozova
  */
 public interface AlertAlarm extends EventListener{

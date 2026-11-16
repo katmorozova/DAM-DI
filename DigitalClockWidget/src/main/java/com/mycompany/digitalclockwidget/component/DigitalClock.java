@@ -23,6 +23,8 @@ public class DigitalClock extends JLabel implements Serializable {
     private int alarmMinut = 0;
     private String alarmMessage = "ALARM!";
     
+    private AlertAlarm alertAlarm;
+    
     public DigitalClock(){
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
@@ -46,9 +48,18 @@ public class DigitalClock extends JLabel implements Serializable {
                 }
                 
                 // Comprobamos la alarma
-                
-            }
-            
+                if (alarmIsActive) {
+                    if (
+                            actualHour.getHour() == alarmHour && 
+                            actualHour.getMinute() == alarmMinut
+                        ) {
+                        if (alertAlarm != null) {
+                            Alarm evento = new Alarm(this, alarmMessage);
+                            alertAlarm.suenaAlarma(evento);
+                        }
+                    }
+                }
+            }     
         });
         
       timer.start();
@@ -93,4 +104,12 @@ public class DigitalClock extends JLabel implements Serializable {
     public void setAlarmMessage(String alarmMessage) {
         this.alarmMessage = alarmMessage;
     }  
+    
+    public void addAlertAlarm(AlertAlarm alert) {
+    this.alertAlarm = alert;
+}
+
+    public void removeAlertAlarm(AlertAlarm alert) {
+        this.alertAlarm = null;
+    }
 }
