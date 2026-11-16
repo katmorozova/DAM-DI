@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.digitalclockwidget;
+package com.mycompany.digitalclockwidget.test;
 
 /**
  *
- * @author ekmor
+ * @author Ekaterina Morozova
  */
 public class DigitalClockWidget {
 
