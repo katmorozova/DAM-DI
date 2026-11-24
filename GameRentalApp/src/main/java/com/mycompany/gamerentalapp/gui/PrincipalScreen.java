@@ -37,6 +37,12 @@ public class PrincipalScreen extends javax.swing.JFrame {
         initComponents();
         initCustomizations();
     }
+    
+    public PrincipalScreen(DataRepository repository) {
+        this.repository = repository;
+        initComponents();
+        initCustomizations();
+    }
 
     private void initCustomizations() {
         // Center the main window on screen
@@ -68,7 +74,11 @@ public class PrincipalScreen extends javax.swing.JFrame {
         
         // Create game screen listener
         jMenuCreateGame.addActionListener(e -> {
-            CreateGameScreen dialog = new CreateGameScreen(this, true);
+           CreateGameScreen dialog = new CreateGameScreen(
+                   this, 
+                   true, 
+                   this.repository
+           );
             dialog.setVisible(true);
             refreshRentalTable();
         });  
@@ -322,9 +332,14 @@ public class PrincipalScreen extends javax.swing.JFrame {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new PrincipalScreen().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            DataRepository repository = new DataRepository();
+            SampleData.cargarDatos(repository);
+            
+            new PrincipalScreen().setVisible(true);
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

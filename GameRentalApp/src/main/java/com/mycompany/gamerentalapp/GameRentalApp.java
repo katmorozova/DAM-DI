@@ -6,6 +6,7 @@ package com.mycompany.gamerentalapp;
 
 import com.mycompany.gamerentalapp.data.DataRepository;
 import com.mycompany.gamerentalapp.data.SampleData;
+import com.mycompany.gamerentalapp.gui.PrincipalScreen;
 
 /**
  * Clase principalde la aplicación de gestión de alquiler de videojuegos
@@ -21,5 +22,11 @@ public class GameRentalApp {
         
         DataRepository repository = new DataRepository();
         SampleData.cargarDatos(repository);
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new PrincipalScreen(repository).setVisible(true);
+        }
+    });
     }
 }

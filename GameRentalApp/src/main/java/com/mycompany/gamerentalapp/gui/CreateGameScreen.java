@@ -4,21 +4,160 @@
  */
 package com.mycompany.gamerentalapp.gui;
 
+import com.mycompany.gamerentalapp.data.DataRepository;
+import com.mycompany.gamerentalapp.model.Game;
+import com.mycompany.gamerentalapp.model.Genre;
+import com.mycompany.gamerentalapp.model.Platform;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.util.Map;
+import java.util.EnumMap;
+
 /**
  *
- * @author ekmor
+ * @author Ekaterina Morozova
  */
-public class CreateGameScreen extends javax.swing.JDialog {
+public class CreateGameScreen extends JDialog {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CreateGameScreen.class.getName());
+    private DataRepository repository = new DataRepository();
+    
+    private static final java
+            .util
+            .logging
+            .Logger logger = java
+                    .util
+                    .logging
+                    .Logger
+                    .getLogger(CreateGameScreen.class.getName())
+    ;
 
     /**
      * Creates new form CreateGameScreen
      */
-    public CreateGameScreen(java.awt.Frame parent, boolean modal) {
+    public CreateGameScreen(
+            Frame parent, 
+            boolean modal,
+            DataRepository repository
+    ) {
         super(parent, modal);
+        this.repository = repository;
         initComponents();
+        
+        DefaultComboBoxModel<Genre> genreModel = new DefaultComboBoxModel<>();
+        for (Genre genre : Genre.values()) {
+            genreModel.addElement(genre);
+        }
+        ((JComboBox) jComboBoxGenderType).setModel(genreModel);
+        initCustomizations();
     }
+
+    private void initCustomizations() {
+        setLocationRelativeTo(getOwner());
+        
+        // Acción para el botón de confirmar
+        jButtonCreateGameConfirm.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent eventConfirm) {
+                saveConfirmCreation();
+            }
+        });
+    
+        // Acción para el botón CANCELAR
+        jButton2.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent eventCancel) {
+            dispose();
+        }
+    });
+    }
+    
+    // Método para guardar el juego en el repositorio cuando se confirma
+    private void saveConfirmCreation() {
+        String title = jTextFieldGamingName.getText().trim();
+        Genre selectedGenre = (Genre) jComboBoxGenderType.getSelectedItem();
+
+        try {
+            if (title.isEmpty()) {
+                throw new IllegalArgumentException(
+                        "El títol del joc no pot estar buit"
+                );
+            }
+            if (selectedGenre == null) {
+                throw new IllegalArgumentException(
+                        "Has de seleccionar un gènere"
+                );
+            }
+
+            // Recoger stock de plataformas
+            Map<Platform, Integer> platformStock = new EnumMap<>(Platform.class);
+            if (jCheckBoxPss.isSelected()) {
+                platformStock.put(
+                        Platform.PS5, 
+                        (Integer) jSpinnerPssUnits.getValue()
+                );
+            }
+            if (jCheckBoxXbox.isSelected()) {
+                platformStock.put(
+                        Platform.XBOX, 
+                        (Integer) jSpinnerXboxUnits.getValue()
+                );
+            }
+            if (jCheckBoxPc.isSelected()) {
+                platformStock.put(
+                        Platform.PC, 
+                        (Integer) jSpinnerPcUnits.getValue()
+                );
+            }
+            if (jCheckBoxSwitch.isSelected()) {
+                platformStock.put(
+                        Platform.SWITCH_2, 
+                        (Integer) jSpinnerSwitchUnits.getValue()
+                );
+            }
+
+            if (platformStock.isEmpty()) {
+                JOptionPane.showMessageDialog(
+                        this, 
+                        "Has de seleccionar almenys una plataforma", 
+                        "Error", 
+                        JOptionPane.ERROR_MESSAGE
+                );
+                return;
+            }
+
+            // Generamos ID único para el juego
+            String gameId = String.format(
+                    "G%02d", 
+                    repository.getGames().size() + 1
+            );
+
+            // Crearmos y añadimos al repositorio principal
+            Game newGame = new Game(gameId, title, selectedGenre, platformStock);
+            repository.getGames().add(newGame);
+
+            JOptionPane.showMessageDialog(
+                    this, 
+                    "Joc creat correctament", 
+                    "Èxit", 
+                    JOptionPane.INFORMATION_MESSAGE
+            );
+            dispose();
+
+        } catch (IllegalArgumentException exception) {
+            JOptionPane.showMessageDialog(
+                    this, 
+                    exception.getMessage(), 
+                    "Error de Validació", 
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +201,7 @@ public class CreateGameScreen extends javax.swing.JDialog {
         jLabelName1.setForeground(new java.awt.Color(0, 51, 102));
         jLabelName1.setText("Génere*:");
 
-        jComboBoxGenderType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxGenderType.setModel(new javax.swing.DefaultComboBoxModel(Genre.values()));
 
         jPanelPlatfomsDisplay.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Plataformes disponibles", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Semibold", 1, 12), new java.awt.Color(0, 51, 102))); // NOI18N
 
@@ -265,7 +404,12 @@ public class CreateGameScreen extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                CreateGameScreen dialog = new CreateGameScreen(new javax.swing.JFrame(), true);
+                
+                CreateGameScreen dialog = new CreateGameScreen(
+                        new JFrame(), 
+                        true,
+                        new DataRepository()
+                );
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
