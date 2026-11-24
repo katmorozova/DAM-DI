@@ -26,6 +26,7 @@ public class DigitalClock extends JLabel implements Serializable {
     private AlertAlarm alertAlarm;
     
     public DigitalClock(){
+        
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
@@ -64,6 +65,7 @@ public class DigitalClock extends JLabel implements Serializable {
         
       timer.start();
     }
+    
 
     public boolean isClockFormat24() {
         return clockFormat24;
