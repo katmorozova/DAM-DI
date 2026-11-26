@@ -8,11 +8,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
 /**
- *
+ * Clase que permite mostrar la hora actual en formato de 12 o 24 horas, 
+ * actualizarla cada segundo mediante un Timer y configurar una alarma con hora, 
+ * minuto, mensaje personalizado y un sistema de eventos para notificar cuando 
+ * esta se active
+ * 
  * @author Ekaterina Morozova
  */
 public class DigitalClock extends JLabel implements Serializable {
@@ -21,58 +26,64 @@ public class DigitalClock extends JLabel implements Serializable {
     private boolean alarmIsActive = false;
     private int alarmHour = 0;
     private int alarmMinut = 0;
-    private String alarmMessage = "ALARM!";
+    private String alarmMessage = "ALARMA!";
     
     private AlertAlarm alertAlarm;
+    private boolean alarmSound = false;
     
     public DigitalClock(){
+        setHorizontalAlignment(JLabel.CENTER);
+        updateClockDisplay();
         
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
                 LocalTime actualHour = LocalTime.now();
                 //Cambiamos el formato de hora
-                if (clockFormat24) {
-                    setText(actualHour.format(java
-                                    .time
-                                    .format
-                                    .DateTimeFormatter.
-                                    ofPattern("HH:mm:ss")
-                    ));
-                } else {
-                    setText(actualHour.format(java
-                            .time
-                            .format
-                            .DateTimeFormatter
-                            .ofPattern("hh:mm:ss a")
-                    ));
-                }
-                
+                updateClockDisplay();
                 // Comprobamos la alarma
-                if (alarmIsActive) {
-                    if (
-                            actualHour.getHour() == alarmHour && 
-                            actualHour.getMinute() == alarmMinut
-                        ) {
-                        if (alertAlarm != null) {
-                            Alarm evento = new Alarm(this, alarmMessage);
-                            alertAlarm.suenaAlarma(evento);
-                        }
-                    }
-                }
+                checkAlarm();  
             }     
-        });
-        
+        });   
       timer.start();
     }
     
-
+    private void updateClockDisplay() {
+        LocalTime actualHour = LocalTime.now();
+        if(clockFormat24){
+            setText(actualHour.format(DateTimeFormatter.ofPattern("HH:mm:ss")));   
+        }else{
+            setText(actualHour.format(DateTimeFormatter.ofPattern("hh:mm:ss"))); 
+        }
+    }
+    
+    private void checkAlarm(){
+        if (alarmIsActive) {
+            LocalTime actualHour = LocalTime.now();
+            int currentHour = actualHour.getHour();
+            int currentMinute = actualHour.getMinute();
+            
+            if (currentHour == alarmHour && currentMinute == alarmMinut){
+                if(!alarmSound) {
+                   alarmSound = true;
+                   if(alertAlarm != null){
+                       Alarm alarmEvent = new Alarm(DigitalClock.this, alarmMessage);
+                       alertAlarm.suenaAlarma(alarmEvent);
+                   }
+                }
+            }else{
+                alarmSound = false;
+            }
+        }
+    }
+    
     public boolean isClockFormat24() {
         return clockFormat24;
     }
 
     public void setClockFormat24(boolean clockFormat24) {
         this.clockFormat24 = clockFormat24;
+        updateClockDisplay();
     }
 
     public boolean isAlarmIsActive() {

@@ -36,7 +36,7 @@ public class DigitalClockWidget extends JFrame{
     private DigitalClock digitalClock;
     
     public DigitalClockWidget() {
-        setTitle("Digital Clock Test Form");
+        setTitle("Reloj Digital");
         setSize(450, 180);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -68,7 +68,7 @@ public class DigitalClockWidget extends JFrame{
         LocalTime rightNow = LocalTime.now();
         digitalClock.setAlarmHour(rightNow.getHour());
         digitalClock.setAlarmMinut(rightNow.getMinute());
-        digitalClock.setAlarmMessage("Wake up! Wake up! Wake up!");
+        digitalClock.setAlarmMessage("¡Alarma!");
         digitalClock.setAlarmIsActive(true);
 
         //Capturamos evento y mostramos un mensaje cuando suene la alarma
