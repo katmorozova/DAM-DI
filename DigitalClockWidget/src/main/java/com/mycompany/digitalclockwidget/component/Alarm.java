@@ -24,8 +24,5 @@ public class Alarm extends EventObject{
     public String getMessage() {
         return message;
     }
-    
-    
-    
-    
+  
 }

@@ -51,9 +51,17 @@ public class DigitalClock extends JLabel implements Serializable {
     private void updateClockDisplay() {
         LocalTime actualHour = LocalTime.now();
         if(clockFormat24){
-            setText(actualHour.format(DateTimeFormatter.ofPattern("HH:mm:ss")));   
+            setText(actualHour.format(
+                    DateTimeFormatter
+                            .ofPattern("HH:mm:ss")
+                )
+            );   
         }else{
-            setText(actualHour.format(DateTimeFormatter.ofPattern("hh:mm:ss"))); 
+            setText(actualHour.format(
+                    DateTimeFormatter
+                            .ofPattern("hh:mm:ss a")
+                )
+            ); 
         }
     }
     
@@ -67,7 +75,10 @@ public class DigitalClock extends JLabel implements Serializable {
                 if(!alarmSound) {
                    alarmSound = true;
                    if(alertAlarm != null){
-                       Alarm alarmEvent = new Alarm(DigitalClock.this, alarmMessage);
+                       Alarm alarmEvent = new Alarm(
+                               DigitalClock.this, 
+                               alarmMessage
+                       );
                        alertAlarm.suenaAlarma(alarmEvent);
                    }
                 }
