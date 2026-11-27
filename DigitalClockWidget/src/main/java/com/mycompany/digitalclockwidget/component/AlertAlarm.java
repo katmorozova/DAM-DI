@@ -7,6 +7,10 @@ package com.mycompany.digitalclockwidget.component;
 import java.util.EventListener;
 
 /**
+ * Interfaz para el sistema de alarmas del reloj digital
+ * 
+ * Especifica el método que se ejecutará automáticamente cuando el evento de 
+ * la alarma sea desencadenado
  * 
  * @author Ekaterina Morozova
  */
